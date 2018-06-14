@@ -10,17 +10,21 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { ToasterComponent } from './components/global/toaster/toaster.component';
 import { HomeComponent } from './components/pages/home/home.component';
 
-import { AuthService } from './services/auth.service';
+import { AuthService } from './services/api/auth.service';
 
 import { AuthUserGuard } from './guards/auth.user.guard';
 import { RequestInterceptorsProviders } from './middlewares/request/request-interceptors';
+import { HeaderpublicComponent } from './components/common/headerpublic/headerpublic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    HeaderpublicComponent,
+    ToasterComponent
     // components
   ],
   imports: [
@@ -31,9 +35,10 @@ import { RequestInterceptorsProviders } from './middlewares/request/request-inte
     CommonModule,
     LaddaModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
   ],
   providers: [
+    ToasterComponent,
     AuthService,
     AuthUserGuard,
     // services

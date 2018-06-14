@@ -12,10 +12,12 @@ export class AuthUserGuard implements CanActivate {
     canActivate() {
         const accessToken = localStorage.getItem('accessToken');
 
-        if (!accessToken) {
-            this.router.navigate(['/login']);
-            return false;
-        }
+        // DEACTIVATE THE LOGIC FIRST
+
+        // if (!accessToken) {
+        //     this.router.navigate(['/login']);
+        //     return false;
+        // }
         return true;
     }
 }

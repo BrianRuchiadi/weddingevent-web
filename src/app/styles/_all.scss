@@ -1,16 +1,22 @@
 @import 'variables';
 @import './helpers/typography';
+@import 'node_modules/angular2-toaster/src/toaster';
 body {
-    background-color: #F8F8F8;
-    font-family: 'Oswald', sans-serif;
+    background-color: #FCFCFC;
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
     text-decoration: none;
     color: inherit;
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        cursor: pointer;
     }
+}
+
+.container {
+    display: block;
 }
 
 .error {
@@ -18,3 +24,23 @@ a {
     font-style: italic;
     font-size: 90% !important;
 }
+
+ul {
+    font-family: 'Playfair Display', serif;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    color: white;
+    li {
+        a {
+            display: block;
+            padding: 10px 20px;
+            &:hover {
+                background-color: #C7A27C;
+            }
+        }
+    }
+}
+
+// font-family: 'Playfair Display', serif;
+// font-family: 'Montserrat', sans-serif;

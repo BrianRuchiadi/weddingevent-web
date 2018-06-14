@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToasterComponent } from '../../global/toaster/toaster.component';
 
 @Component({
   selector: 'app-home',
@@ -7,8 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['../../../styles/pages/_home.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() { }
+  constructor(
+    private toasterComponent: ToasterComponent
+  ) { }
 
   ngOnInit() {
+    console.log(['showSuccessToaster']);
+    this.toasterComponent.showSuccessToaster();
   }
 }
