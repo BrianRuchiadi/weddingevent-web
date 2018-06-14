@@ -1,0 +1,36 @@
+.notifications {
+    left: calc(50% - 150px);
+    position: absolute;
+    top: 10%;
+    div {
+        border: 1px solid;
+        border-radius: 4px;
+        box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .22), 0 17px 20px 0 rgba(0, 0, 0, .12);
+        cursor: pointer;
+        margin-bottom: .5em;
+        min-height: 3em;
+        padding: 1em;
+        text-align: center;
+        width: 300px;
+        &.success {
+            background-color: #DFF2BF;
+            border-color: darken(#DFF2BF, 30%);
+            color: darken(#DFF2BF, 60%);
+        }
+        &.error {
+            background-color: #FFBABA;
+            border-color: darken(#FFBABA, 10%);
+            color: darken(#FFBABA, 60%);
+        }
+        &.warn {
+            background-color: #FEEFB3;
+            border-color: darken(#FEEFB3, 30%);
+            color: darken(#FEEFB3, 57%);
+        }
+        &.info {
+            background-color: #BDE5F8;
+            border-color: darken(#BDE5F8, 30%);
+            color: darken(#BDE5F8, 50%);
+        }
+    }
+}

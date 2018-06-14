@@ -10,21 +10,23 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { ToasterComponent } from './components/global/toaster/toaster.component';
 import { HomeComponent } from './components/pages/home/home.component';
 
 import { AuthService } from './services/api/auth.service';
+import { NotificationService } from './services/utilities/notification.service';
 
 import { AuthUserGuard } from './guards/auth.user.guard';
-import { RequestInterceptorsProviders } from './middlewares/request/request-interceptors';
+import { RequestInterceptorsProviders } from './middlewares/request/request-interceptors.provider';
+import { ErrorHandlerProviders } from './middlewares/error/error.provider';
 import { HeaderpublicComponent } from './components/common/headerpublic/headerpublic.component';
+import { NotificationComponent } from './components/common/notification/notification.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderpublicComponent,
-    ToasterComponent
+    NotificationComponent,
     // components
   ],
   imports: [
@@ -38,11 +40,12 @@ import { HeaderpublicComponent } from './components/common/headerpublic/headerpu
     AngularFontAwesomeModule,
   ],
   providers: [
-    ToasterComponent,
     AuthService,
+    NotificationService,
     AuthUserGuard,
     // services
-    RequestInterceptorsProviders
+    RequestInterceptorsProviders,
+    ErrorHandlerProviders
     // middleware
   ],
   bootstrap: [AppComponent]
