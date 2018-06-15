@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import { Notification } from './../../../classes/notification';
 import { NotificationService } from './../../../services/utilities/notification.service';
@@ -9,10 +9,11 @@ import { NotificationService } from './../../../services/utilities/notification.
   styleUrls: ['../../../styles/common/_notification.scss']
 })
 export class NotificationComponent implements OnInit {
-  public notes: Notification[];
+  public notes: Notification[] = [];
 
   constructor(
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit() {
@@ -20,13 +21,12 @@ export class NotificationComponent implements OnInit {
   }
 
   public subscribeNotification() {
-    this.notes = new Array<Notification>();
-
-    this.notificationService.noteAdded.subscribe(
+    return this.notificationService.noteAdded.subscribe(
       note => {
         this.notes.push(note);
         // this.notes.push({type: note.type, message: note.message});
-        console.log(['notification component subscribe noteAdded', this.notes, note]);
+        console.log(['notification component subscribe noteAdded', this.notes, note, this.testBool]);
+        this.cdr.detectChanges();
       }
     );
   }
@@ -36,6 +36,7 @@ export class NotificationComponent implements OnInit {
 
     if (index >= 0) {
       this.notes.splice(index, 1);
+      this.cdr.detectChanges();
     }
   }
 
