@@ -1,9 +1,19 @@
 .notifications {
-    left: calc(50% - 150px);
+    right: 10px;
+    top: 10px;
     position: absolute;
-    top: 10%;
+    i {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        color: red;
+        padding: 2px 5px;
+        border-radius: 50%;
+        background-color: white;
+    }
     div {
         border: 1px solid;
+        border-color: transparent;
         border-radius: 4px;
         box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .22), 0 17px 20px 0 rgba(0, 0, 0, .12);
         cursor: pointer;
@@ -13,24 +23,20 @@
         text-align: center;
         width: 300px;
         &.success {
-            background-color: #DFF2BF;
-            border-color: darken(#DFF2BF, 30%);
-            color: darken(#DFF2BF, 60%);
+            background-color: #42CC8D;
+            color: white;
         }
         &.error {
-            background-color: #FFBABA;
-            border-color: darken(#FFBABA, 10%);
-            color: darken(#FFBABA, 60%);
+            background-color: #CC4242;
+            color: white;
         }
         &.warn {
-            background-color: #FEEFB3;
-            border-color: darken(#FEEFB3, 30%);
-            color: darken(#FEEFB3, 57%);
+            background-color: #CC8F42;
+            color: white;
         }
         &.info {
-            background-color: #BDE5F8;
-            border-color: darken(#BDE5F8, 30%);
-            color: darken(#BDE5F8, 50%);
+            background-color: #4292CC;
+            color: white;
         }
     }
 }

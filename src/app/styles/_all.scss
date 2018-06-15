@@ -42,5 +42,13 @@ ul {
     }
 }
 
+.content {
+    display: inline-block;
+    width: calc(100vw - 250px);
+    height: 100vh;
+    vertical-align: top;
+}
+
 // font-family: 'Playfair Display', serif;
 // font-family: 'Montserrat', sans-serif;
+// font-family: 'Aguafina Script', cursive;

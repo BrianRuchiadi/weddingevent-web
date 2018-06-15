@@ -1,0 +1,55 @@
+h1 {
+    font-family: 'Aguafina Script', cursive;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    thead {
+        tr {
+            th {
+                background-color: #154A71;
+                color: white;
+                padding: 8px 10px;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:nth-of-type(odd) {
+                td {
+                    background-color: #E2E2E2;
+                }
+            }
+            &:nth-of-type(even) {
+                td {
+                    background-color: #EEEEEE;
+                }
+            }
+        }
+    }
+}
+
+button,
+label {
+    padding: 5px 10px;
+}
+
+.attending {
+    color: white;
+    background-color: #15715B;
+}
+
+.not-attending {
+    color: white;
+    background-color: #711529;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.text-center {
+    text-align: center;
+}

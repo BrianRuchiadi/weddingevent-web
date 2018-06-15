@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/pages/home/home.component';
 
 import { AuthService } from './services/api/auth.service';
 import { NotificationService } from './services/utilities/notification.service';
@@ -20,13 +19,22 @@ import { RequestInterceptorsProviders } from './middlewares/request/request-inte
 import { ErrorHandlerProviders } from './middlewares/error/error.provider';
 import { HeaderpublicComponent } from './components/common/headerpublic/headerpublic.component';
 import { NotificationComponent } from './components/common/notification/notification.component';
+import { StoryComponent } from './components/pages/story/story.component';
+import { RsvpComponent } from './components/pages/rsvp/rsvp.component';
+import { SeatingComponent } from './components/pages/seating/seating.component';
+import { GalleriesComponent } from './components/pages/galleries/galleries.component';
+import { RedpacketComponent } from './components/pages/redpacket/redpacket.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderpublicComponent,
     NotificationComponent,
+    StoryComponent,
+    RsvpComponent,
+    SeatingComponent,
+    GalleriesComponent,
+    RedpacketComponent,
     // components
   ],
   imports: [

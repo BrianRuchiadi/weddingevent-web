@@ -1,0 +1,19 @@
+h1 {
+    font-family: 'Aguafina Script', cursive;
+    text-align: center;
+}
+
+.image-holder {
+    width: calc(100vw - 250px);
+    text-align: center;
+}
+
+.images {
+    display: inline-block;
+    height: 160px;
+    width: 120px;
+    background-color: grey;
+    margin: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px black;
+}
