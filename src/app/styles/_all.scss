@@ -36,7 +36,7 @@ ul {
             display: block;
             padding: 10px 20px;
             &:hover {
-                background-color: #C7A27C;
+                background-color: #A0A2A4;
             }
         }
     }
@@ -47,6 +47,9 @@ ul {
     width: calc(100vw - 250px);
     height: 100vh;
     vertical-align: top;
+    background: url('./../../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 // font-family: 'Playfair Display', serif;

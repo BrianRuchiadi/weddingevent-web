@@ -8,7 +8,7 @@ table {
     thead {
         tr {
             th {
-                background-color: #154A71;
+                background-color: #0B5996;
                 color: white;
                 padding: 8px 10px;
             }
@@ -16,6 +16,14 @@ table {
     }
     tbody {
         tr {
+            td {
+                padding: 5px;
+                &.disabled {
+                    pointer-events: none;
+                    background-color: #711529 !important;
+                    opacity: 0.3;
+                }
+            }
             &:nth-of-type(odd) {
                 td {
                     background-color: #E2E2E2;
@@ -43,11 +51,6 @@ label {
 .not-attending {
     color: white;
     background-color: #711529;
-}
-
-.disabled {
-    pointer-events: none;
-    opacity: 0.3;
 }
 
 .text-center {

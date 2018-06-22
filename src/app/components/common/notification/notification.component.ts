@@ -25,7 +25,7 @@ export class NotificationComponent implements OnInit {
       note => {
         this.notes.push(note);
         // this.notes.push({type: note.type, message: note.message});
-        console.log(['notification component subscribe noteAdded', this.notes, note, this.testBool]);
+        console.log(['notification component subscribe noteAdded', this.notes, note]);
         this.cdr.detectChanges();
       }
     );
